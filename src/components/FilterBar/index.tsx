@@ -42,7 +42,7 @@ function FilterBar() {
                     onSuccess: (message, payload) => setCarlookup(payload),
                     onError: (message) => { },
                 },
-                url: "https://otpapidev.komut.team:1471/api/car/carlookupdetails",
+                url: "",
             })
         );
 
@@ -99,7 +99,7 @@ function FilterBar() {
                                                 onError: (message) => { },
                                             },
 
-                                            url: "https://otpapidev.komut.team:1471/api/car/definitions/brand/" + item.Id,
+                                            url: "" + item.Id,
                                         })
                                     );
                                 }}

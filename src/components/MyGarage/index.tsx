@@ -24,7 +24,7 @@ function MyGarage({
     const handleClose = () => setOpen(false);
     //const garageCarts = useSelector(garageCartSelector);
 
-    const url = "https://otpapidev.komut.team:1471/";
+    const url = "";
     const { t, i18n } = useTranslation();
     const dataRef = useRef<GarageCartItem>({
         ExtraServices: data?.ExtraServices ? data.ExtraServices : [],

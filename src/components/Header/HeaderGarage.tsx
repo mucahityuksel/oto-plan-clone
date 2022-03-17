@@ -10,7 +10,7 @@ import garageCart from '../../redux/garage';
 function HeaderGarage({data} : {data : GarageCartItem[]}) {
     const {t,i18n} = useTranslation();
     const dispatch = useDispatch();
-    const url = "https://otpapidev.komut.team:1471/";
+    const url = "";
     const history = useHistory()
 
     const remove = (item:any) => {

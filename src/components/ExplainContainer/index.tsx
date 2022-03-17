@@ -4,7 +4,7 @@ import image from "../../assets/car_hero.jpg"
 import "./style.scss"
 function ExplainContainer() {
     const {t,i18n} = useTranslation();
-    const url = "https://otpapidev.komut.team:1471/";
+    const url = "";
     return (
         <div className='explain-container'>
             <div style={{flex:"15%",marginRight:"35px"}}><img style={{width:"100%", objectFit:"contain"}} src={image}></img> </div>

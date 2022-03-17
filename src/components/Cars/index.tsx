@@ -16,7 +16,7 @@ function Cars() {
     const history = useHistory();
     const dispatch = useDispatch()
     const [carss, setCarss] = useState<Car[]>([])
-    const url = "https://otpapidev.komut.team:1471/";
+    const url = "";
     useEffect(() => {
         dispatch(getCarss({
             payload: {
@@ -25,7 +25,7 @@ function Cars() {
                 },
                 onError: () => { }
             },
-            url: "https://otpapidev.komut.team:1471/api/car"
+            url: ""
         }))
         
     }, [])

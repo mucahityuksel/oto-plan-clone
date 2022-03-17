@@ -27,7 +27,7 @@ function DetailFilter({ setCars }: { setCars: (car: Car[]) => void }) {
                     },
                     onError: (message) => { },
                 },
-                url: "https://otpapidev.komut.team:1471/api/car/carlookupdetails"
+                url: ""
             })
         );
     }, []);
@@ -188,7 +188,7 @@ function DetailFilter({ setCars }: { setCars: (car: Car[]) => void }) {
                                             },
                                             onError: (message) => { },
                                         },
-                                        url: "https://otpapidev.komut.team:1471/api/car/filter" + path,
+                                        url: "" + path,
                                     })
                                 );
                             }}

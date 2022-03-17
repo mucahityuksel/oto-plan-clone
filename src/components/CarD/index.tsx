@@ -27,7 +27,7 @@ function CarD({ data }: { data?: CarDetail }) {
     const [price, setPrices] = useState<Price[]>([]);
     const offerRef = useRef<GarageCartItem>({ ExtraServices: [], Count: 0 });
     const [param, setParam] = useState(params.id);
-    const url = "https://otpapidev.komut.team:1471/";
+    const url = "";
     const { t, i18n } = useTranslation();
 
     return (
@@ -97,7 +97,7 @@ function CarD({ data }: { data?: CarDetail }) {
                                                             onSuccess: (message, payload) => setExtraService(payload),
                                                             onError: (message) => { }
                                                         },
-                                                        url: "https://otpapidev.komut.team:1471/api/definitions/extraservice"
+                                                        url: ""
                                                     })
                                                 );
                                                 dispatch(
@@ -106,7 +106,7 @@ function CarD({ data }: { data?: CarDetail }) {
                                                             onSuccess: (message, payload) => setColors(payload),
                                                             onError: (message) => { },
                                                         },
-                                                        url: "https://otpapidev.komut.team:1471/api/car/definitions/color",
+                                                        url: "",
                                                     })
                                                 );
                                                 dispatch(
@@ -115,7 +115,7 @@ function CarD({ data }: { data?: CarDetail }) {
                                                             onSuccess: (message, payload) => setPrices(payload),
                                                             onError: (message) => { },
                                                         },
-                                                        url: "https://otpapidev.komut.team:1471/api/car/price/bycarid" + data?.Id,
+                                                        url: "" + data?.Id,
                                                     })
                                                 );
                                                 offerRef.current = { ExtraServices: [], Count: 0 };

@@ -41,7 +41,7 @@ function CarDetail() {
                     },
                     onError: (message) => { },
                 },
-                url: "https://otpapidev.komut.team:1471/api/car/filter" + location.search,
+                url: "" + location.search,
             })
         );
         // eslint-disable-next-line react-hooks/exhaustive-deps

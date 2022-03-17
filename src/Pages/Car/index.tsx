@@ -27,7 +27,7 @@ function Car() {
                 },
                 onError: () => { }
             },
-            url: `https://otpapidev.komut.team:1471/api/car/${params.id}`
+            url: ``
         }))
         console.log(selectedCar)
     },[])
