@@ -1,0 +1,298 @@
+@import "../../fonts/index.scss";
+@import "../../styles/index.scss";
+
+@media only screen and (min-width:601px) {  
+    .detail-body-titler{
+        text-align: start;
+        display: flex;
+        justify-content: start;
+        font-family: $text-font;
+        font-size: 32px;
+        white-space: nowrap;
+        font-weight: 800;
+        max-width: 1245px;
+        width: 100%;
+        margin-left: 15px;
+        margin-top: -10px;
+    } 
+    .mod-title{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .car-component{
+        width: 100%;
+        background-color: #F8F7F6;
+        .car-container{
+            position: relative;
+            height: 100%;
+            .detail-div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+              
+                .car-detail-header{
+                    display: block;
+                    margin-top: 1px;
+                    justify-content: space-between;
+                    color: black;
+                    max-width: 1245px;
+                    width: 100%;
+                   .detail-header-bar{
+                       display: flex;
+                       justify-content: space-between;
+                       margin-top: 15px;
+                       margin-left: 9px;
+                       .all-cars{
+                        white-space: nowrap;
+                        color: #707070;
+                        font-size: 12px;
+                        font-family: $text-font;
+                        &:hover{
+                            color: black;
+                            text-decoration: none;
+                        }
+                    }
+                   }
+                   
+                }
+                
+        }
+            .detail-car-body-div{     
+                margin: 0px auto;
+                padding: 0;
+                width: 100%;
+                .y{
+                    
+                    height: 100%;
+                    width: 100%;
+                    background-color: #fff;
+                    box-shadow: inset 0 -100px 60px rgb(0 0 0 / 16%);
+                    margin: 0px auto;
+                    padding: 0;
+                    .z{
+                        max-width: 1245px;
+                        margin: 0px auto;
+                        display: flex;
+                        justify-content: center;
+                        .car-body{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            flex-wrap: wrap;          
+                            padding-block-end: 130px; 
+                            .left-car-items{
+                                min-width: 500px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-end;
+                                margin-inline-end: 60px;
+                                flex: 1;
+                                .car-detail-image{
+                                    width: 80%;
+                                    vertical-align: middle;
+                                }
+                                .warning-text{
+                                    font-family: $text-font;
+                                    color:#707070;
+                                    font-size: 16px;
+                                    margin-block-start: 120px;
+                                }
+                            }    
+                            .car-center{             
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                flex-wrap: wrap;
+                                flex: 1;
+                            }
+                            .car-right{     
+                                padding-left: 75px;
+                                max-width: 590px;
+                                min-height: 455px;   
+                                flex: 3;              
+                                .divider{
+                                    height: 4px;
+                                    background-image: linear-gradient(to left, $main, white);
+                                    width: 100%;
+                                    display: flex;
+                                }
+                                .car-info{
+                                    padding: 20px 0px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    text-align: start;
+                                    width: 100%;
+                                    flex-wrap: wrap;
+                                    .info-header {
+                                        font-family: $text-font;
+                                        color: #585858;
+                                        .info-title{
+                                            font-size: 24px;
+                                            font-weight: 800;
+                                        }
+                                        .info-subtitle{
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                                .car-text{
+                                    padding: 10px 0px;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    text-align: start;
+                                }
+                                .buy-container{
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: end;    
+                                    flex-wrap: wrap;
+                                    .buy-button{
+                                        padding: 0px 0px;
+                                        font-weight: 800;
+                            
+                                        border: none;
+                                        outline: none;
+                                        color: white;
+                                        background-color: $main;
+                                        max-width: 240px;
+                                        width: 100%;
+                                        height: 60px;
+                                    }
+                                    .modal-container {
+                                        max-width: 1220px;
+                                        width: 85%!important;
+                                      }
+                                      .modal-container > div > .rs-modal-content {
+                                        background-color: #f8f7f6;
+                                        padding: 0px;
+                                      }
+                                      .modal-title {
+                                        padding: 20px 0px 17px 100px;
+                                        font-weight: 700;
+                                        font-size: 24px;
+                                      }
+                                      .modal-body {
+                                        padding-block-end: 37px;
+                                        max-height: 700px !important;
+                                      }
+                                      
+                                      .rs-modal-title {
+                                        font-weight: 900;
+                                        font-size: 30px;
+                                      }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+  
+@media only screen and (max-width:600px){
+    .mod-title{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .detail-body-titler{
+        text-align: start;
+        display: flex;
+        justify-content: start;
+        font-family: $text-font;
+        font-size: 32px;
+        white-space: nowrap;
+        font-weight: 800;
+} 
+   .car-center{
+       display: flex;
+       flex-wrap: wrap;
+   }
+   .car-right{     
+    padding-left: 75px;
+    max-width: 5456px;
+    min-height: 455px;   
+    flex: 3;         
+    text-align: start;       
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    .divider{
+        height: 4px;
+        background-image: linear-gradient(to left, $main, white);
+        width: 100%;
+    }
+    .car-info{
+        padding: 20px 0px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: start;
+        .info-header {
+            font-family: $text-font;
+            color: #585858;
+            .info-title{
+                font-size: 24px;
+                font-weight: 800;
+            }
+            .info-subtitle{
+                font-size: 16px;
+            }
+        }
+    }
+    .car-text{
+        padding: 10px 0px;
+        display: flex;
+    }
+    .buy-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;    
+        flex-wrap: wrap;
+        .buy-button{
+            padding: 0px 0px;
+            font-weight: 800;
+
+            border: none;
+            outline: none;
+            color: white;
+            background-color: $main;
+            max-width: 240px;
+            width: 100%;
+            height: 60px;
+        }
+        .modal-container {
+            max-width: 1220px;
+            width: 85%!important;
+          }
+          .modal-container > div > .rs-modal-content {
+            background-color: #f8f7f6;
+            padding: 0px;
+          }
+          .modal-title  {
+            padding: 20px 0px 17px 100px;
+            font-weight: 700;
+            font-size: 24px;
+            
+          }
+          .modal-body {
+            padding-block-end: 37px;
+            max-height: 700px !important;
+          }
+          
+          .rs-modal-title{
+            font-weight: 700;
+            font-size: 30px;
+          }
+    }
+}
+.car-detail-image{
+    width: 214px;
+    height: 130px;
+    object-fit: contain;
+}
+}

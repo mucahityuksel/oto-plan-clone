@@ -1,0 +1,22 @@
+@import "../../fonts/index.scss";
+
+
+.campaign-header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 8px;
+    max-width: 1245px;
+    width: 100%;
+}
+.campaign-title{
+    color: #4D4D4D;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: $text-font;
+}
+.all-campaign{
+    &:hover{
+        color: black;
+    }
+}

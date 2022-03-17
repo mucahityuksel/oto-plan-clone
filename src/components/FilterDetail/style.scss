@@ -1,0 +1,105 @@
+@import "../../fonts/index.scss";
+
+@media only screen and (min-width:600px){
+    .filter-detail-component{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 75px 0px;
+        background-color: #F8F7F6;
+        
+        .filter-detail-container{
+            max-width: 1245px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;    
+            flex-wrap: wrap;
+            gap:10px;
+            
+            margin-top: -30px;
+            margin-bottom: -30px;
+            
+            .detail-filter-items{
+                display: flex;
+                align-items: center;
+                margin-left: 10px;
+                justify-content: center;
+                width: 200px;
+                background-color: white;
+                padding: 10px;
+                text-align: start;
+                box-shadow: 0 2px 6px rgb(0 0 0 / 16%);
+                div{
+                    padding: 0px 10px;
+                    font-family: $text-font;
+                    white-space: nowrap;
+                    display: flex;
+                    flex-direction: column;
+                    .title{
+                        font-weight: 700;
+                        color: #575757;
+                        font-size: 16px;
+                    }
+                    .subtitle{
+                        color: #999999;
+                        font-size: 16px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media only screen and (max-width:599px) {
+    .filter-detail-component{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 75px 0px;
+        background-color: #F8F7F6;
+        
+        .filter-detail-container{
+            max-width: 1245px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;    
+            flex-wrap: wrap;
+            gap:10px;
+            
+            margin-top: -30px;
+            margin-bottom: -30px;
+            
+            .detail-filter-items{
+                display: flex;
+                align-items: center;
+                margin-left: 10px;
+                justify-content: center;
+                width: 180px;
+                background-color: white;
+                padding: 10px;
+                text-align: start;
+                box-shadow: 0 2px 6px rgb(0 0 0 / 16%);
+                div{
+                    padding: 0px 10px;
+                    font-family: $text-font;
+                    white-space: nowrap;
+                    display: flex;
+                    flex-direction: column;
+                    .title{
+                        font-weight: 700;
+                        color: #575757;
+                        font-size: 16px;
+                    }
+                    .subtitle{
+                        color: #999999;
+                        font-size: 16px;
+                    }
+                }
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import "../../fonts/index.scss";
+
+@media only screen and (min-width : 600px) {
+    .suggestion-component{
+        max-width: 1245px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .suggestion-header{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1245px;
+        width: 100%;
+        padding: 25px 9px;
+        margin-bottom: -65px;
+    }
+    .suggestion-title{
+        color: #4D4D4D;
+        font-size: 30px;
+        font-weight: 800;
+        font-family: $text-font;
+    }
+}
+@media only screen and (max-width : 599px) {
+    .suggestion-component{
+        max-width: 1224px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .suggestion-header{
+        display: flex;
+        justify-content: start;
+        max-width: 1224px;
+        width: 100%;
+        padding: 25px 45px;
+        margin-bottom: -115px;
+    }
+    .suggestion-title{
+        color: #4D4D4D;
+        font-size: 30px;
+        font-weight: 800;
+        font-family: $text-font;
+    }
+}

@@ -1,0 +1,93 @@
+@import "../../fonts/index.scss";
+@import "../../styles/index.scss";
+
+.condition-component{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        .condition-header{
+            display: flex;
+            background-color: $main;
+            height: 30px;
+            margin-block: 21px;
+            width: 100%;
+            margin: 0px;
+            .condition-header-nav{
+                max-width: 1245px;
+                display: flex;
+                width: 100%;
+                margin: 0px auto;  
+                padding: 0px;     
+                
+                div a {
+                    border-radius: 0px;
+                    margin-left: 9px;
+                }
+                .c-nav-title{
+                    color: white;
+                    height: 30px;
+                    white-space: nowrap;
+                    &:focus{
+                        color: black;
+                        background-color: white;       
+                    }
+                }
+            }
+        }
+        .condition-body{
+            max-width: 1245px;
+            width: 100%;
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            
+            padding: 25px;
+            margin-left: 15px;
+            .c-body-title{
+                font-family: $text-font;
+                font-size: 24px;
+                font-weight: 800;
+                color: #585858;
+            }
+            p{
+                font-family: $text-font;
+                padding: 20px 0px;
+                color: #585858;
+                font-size: 16px;
+            }
+            .c-body-plus{
+                display: flex;
+                
+                .condition-card{
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 300px;
+                    width: 100%;
+                    padding: 10px 10px;
+                    .c-body-title{
+                        font-family: $text-font;
+                        font-size: 24px;
+                        font-weight: 800;
+                        color: #585858;
+                    }
+                   .c-body-subtitle{
+                    font-family: $text-font;
+                    padding: 15px;
+                    color: #585858;
+                    font-size: 16px;
+                   }
+                    div{
+                        height: 187px;
+                        background-color: #f8f7f6;
+                        
+                    }
+                }
+            }
+        }
+        .condition-new-body{
+            display: none;
+        }
+    
+}

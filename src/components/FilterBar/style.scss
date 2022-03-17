@@ -1,0 +1,63 @@
+@import '~antd/dist/antd.css';
+
+@media only screen  and (min-width: 641px){
+
+    //style={{position:"fixed", bottom: "0", backgroundColor: "#ECEBE9", width: "100vw", height: "100px", display: "flex", alignItems: "center", justifyContent: "center" }}
+    //style={{position:"fixed", bottom: "0", backgroundColor: "#ECEBE9", width: "100vw", height: "100px", display: "flex", alignItems: "center", justifyContent: "center" }}
+    .filter-component{
+        background-color: #ededed;
+        width: 100%; 
+        height: 100px;
+        display: flex;
+        bottom: 0px;
+       
+        
+        justify-content: center; 
+    }
+    //style={{ display: "flex", width: "100%", maxWidth: "1224px", gap: "50px" }}
+    //style={{ display: "flex", width: "100%", maxWidth: "1224px", gap: "50px" }}
+    .filter-container{
+        display: flex;
+        max-width: 1250px;
+        width: 100%;
+        gap: 10px;
+        align-items: center;
+    }
+   
+    .select-picker > div {
+        border: 1px solid !important;
+        border-color: #ddd; 
+        padding-block: 9px !important;
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .filter-component{
+       
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: 0px;
+        background-color: #ecebe9;
+        width: 100vw;
+        height: 280px;
+        display: flex;
+        position: relative;
+        align-items: center;
+       
+        
+    }
+    //style={{ display: "flex", width: "100%", maxWidth: "1224px", gap: "50px" }}
+    //style={{ display: "flex", width: "100%", maxWidth: "1224px", gap: "50px" }}
+    .filter-container{
+        display: flex;
+        max-width: 1224px;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

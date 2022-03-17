@@ -1,0 +1,107 @@
+{
+  "Marka" :[
+    {
+      "label": "Ford",
+      "value": "Ford",
+      "role": "Master"
+    },
+    {
+      "label": "Mercedes",
+      "value": "Mercedes",
+      "role": "Master"
+    },
+    {
+      "label": "Renault",
+      "value": "Renault",
+      "role": "Master"
+    },
+    {
+      "label": "Jeep",
+      "value": "Jeep",
+      "role": "Master"
+    },
+    {
+      "label": "Volvo",
+      "value": "Volvo",
+      "role": "Master"
+    },
+    {
+      "label": "Audi",
+      "value": "Audi",
+      "role": "Master"
+    },
+    {
+      "label": "BMW",
+      "value": "BMW",
+      "role": "Master"
+    },
+    {
+      "label": "Fiat",
+      "value": "Fiat",
+      "role": "Master"
+    }
+  ],
+  "Model":[
+    {
+      "label": "No Result",
+      "value": "No Result",
+      "role": "Master"
+    }
+  ],
+  "GovdeTipi":[
+    {
+      "label": "Hatchback3",
+      "value": "Hatchback3",
+      "role": "Master"
+    },
+    {
+      "label": "Vans",
+      "value": "Vans",
+      "role": "Master"
+    },
+    {
+      "label": "SUV",
+      "value": "SUV",
+      "role": "Master"
+    },
+    {
+      "label": "Minivan",
+      "value": "Minivan",
+      "role": "Master"
+    },
+    {
+      "label": "Sedan",
+      "value": "Sedan",
+      "role": "Master"
+    },
+    {
+      "label": "Station Wagon",
+      "value": "Station Wagon",
+      "role": "Master"
+    }
+  ],
+  "YakitTipi": [
+    {
+      "label": "Dizel",
+      "value": "Dizel",
+      "role": "Master"
+    },
+    {
+      "label": "Benzin",
+      "value": "Benzin",
+      "role": "Master"
+    }
+  ],
+  "Sanziman":[
+    {
+      "label": "Otomatik",
+      "value": "Otomatik",
+      "role": "Master"
+    },
+    {
+      "label": "Manuel",
+      "value": "Manuel",
+      "role": "Master"
+    }
+  ]
+}

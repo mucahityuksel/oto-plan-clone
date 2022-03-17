@@ -1,0 +1,79 @@
+@import "../../fonts/index.scss";
+@media only screen and (min-width: 600px){
+    // display: "block", width: "100%", maxWidth: "1224px",margin:"0",padding:"150px 0px"
+    .capmigne-container{
+        display: block;
+        max-width: 1245px;
+        width: 100%;
+       
+       
+    }
+    .campaign-header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .campaign-title{
+        color: #4D4D4D;
+        font-size: 30px;
+        font-weight: 800;
+        font-family: $text-font;
+    }
+    
+    .all-campaign{
+        font-size: 12px;
+        font-family: $text-font;
+        text-decoration: none;
+        color: #707070;
+        
+    }
+    // display: "flex", justifyContent: "space-between", flexWrap: "wrap", paddingBlockStart: "150px", gap: "16px", marginBlock: "65px 53px", margin: "0px auto"
+    .campaign-cards{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1240px;
+        width: 100%;
+        flex-wrap: wrap;
+        padding-block-start: 100px;
+        gap:16px;
+        margin-block: 65px 50px;
+        margin: 0px auto;
+        margin-left: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 599px){
+    .capmigne-container{
+        display: block;
+        
+        
+        padding: 150px 20px;
+        margin: 0;
+    }
+    .campaign-header{
+        display: flex;
+        justify-content: space-around;
+    }
+    .campaign-title{
+        color: #4D4D4D;
+        font-size: 30px;
+        font-weight: 800;
+        font-family: $text-font;
+    }
+    .campaign-cards{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-block-start: 150px;
+        gap:16px;
+        margin-block: 65px 53px;
+        margin: 0px auto;
+    }
+    .all-campaign{
+        font-size: 12px;
+        font-family: $text-font;
+        text-decoration: none;
+        color: #707070;
+        
+    }
+}
