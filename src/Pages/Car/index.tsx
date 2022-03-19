@@ -13,7 +13,7 @@ import { getCarDetail } from '../../redux/cars'
 
 
 function Car() {
-    //burada dispatch yapalım dataları öyle yollayalım
+
     const params:any = useParams();
     const [param,setParam] = useState(params.id)
     const dispatch = useDispatch();
