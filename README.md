@@ -123,6 +123,15 @@ src/
 └── route.tsx        # React Router tanımları
 ```
 
-## Lisans
+## Vercel Deploy
+
+Proje Vercel üzerinde deploy edilebilir. `vercel.json` dosyası SPA routing ve build ayarlarını içerir.
+
+Build sırasında ESLint uyarılarının hata sayılmaması için `CI=false` kullanılır (`cross-env` ile).
+
+```bash
+npm run build
+```
+
 
 Bu proje eğitim ve demo amaçlıdır.
