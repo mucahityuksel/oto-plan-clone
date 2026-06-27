@@ -2,6 +2,8 @@
 
 Oto Plan araç kiralama platformunun frontend klonu. Uygulama tamamen **mock veriler** ile çalışır; harici API veya backend bağlantısı gerektirmez.
 
+**Canlı demo:** [https://oto-plan-clone.vercel.app/](https://oto-plan-clone.vercel.app/)
+
 ## Özellikler
 
 - Ana sayfa ve kampanya alanı
@@ -124,6 +126,8 @@ src/
 ```
 
 ## Vercel Deploy
+
+Canlı site: [https://oto-plan-clone.vercel.app/](https://oto-plan-clone.vercel.app/)
 
 Proje Vercel üzerinde deploy edilebilir. `vercel.json` dosyası SPA routing ve build ayarlarını içerir.
 
