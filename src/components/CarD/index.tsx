@@ -10,6 +10,7 @@ import { Color, ExtraService, GarageCartItem, Price } from '../MyGarage/type'
 import { useDispatch } from 'react-redux'
 import { getCarPriceList, getColorList, getExtraService } from '../../redux/cars'
 import { useTranslation } from 'react-i18next'
+import { getCarImageUrl } from '../../helpers/carImage'
 
 
 
@@ -27,7 +28,6 @@ function CarD({ data }: { data?: CarDetail }) {
     const [price, setPrices] = useState<Price[]>([]);
     const offerRef = useRef<GarageCartItem>({ ExtraServices: [], Count: 0 });
     const [param, setParam] = useState(params.id);
-    const url = "";
     const { t, i18n } = useTranslation();
 
     return (
@@ -56,15 +56,15 @@ function CarD({ data }: { data?: CarDetail }) {
                             <div className='z'>
                                 <div className='car-body'>
                                     <div className='left-car-items'>
-                                        <img src={url + data?.CarImages.FrontImage} className='car-detail-image'></img>
+                                        <img src={getCarImageUrl(data?.CarImages.FrontImage)} className='car-detail-image' alt={data?.DetailTitle}></img>
                                         <div className='warning-text'>*{t("Detail Warning")}</div>
                                     </div>
                                     <div className='car-center'>
-                                        <div style={{ width: "83px", height: "83px", backgroundColor: "white", border: "1px solid black", margin: "10px" }}><img style={{ width: "90%", height: "83px", objectFit: "contain", verticalAlign: "middle" }} src={url + data?.CarImages.FrontImage}></img></div>
-                                        <div style={{ width: "83px", height: "83px", backgroundColor: "white", border: "1px solid black", margin: "10px" }}><img style={{ width: "90%", height: "83px", objectFit: "contain", verticalAlign: "middle" }} src={url + data?.CarImages.FrontRightImage}></img></div>
-                                        <div style={{ width: "83px", height: "83px", backgroundColor: "white", border: "1px solid black", margin: "10px" }}><img style={{ width: "90%", height: "83px", objectFit: "contain", verticalAlign: "middle" }} src={url + data?.CarImages.InsideImage}></img></div>
-                                        <div style={{ width: "83px", height: "83px", backgroundColor: "white", border: "1px solid black", margin: "10px" }}><img style={{ width: "90%", height: "83px", objectFit: "contain", verticalAlign: "middle" }} src={url + data?.CarImages.RearImage}></img></div>
-                                        <div style={{ width: "83px", height: "83px", backgroundColor: "white", border: "1px solid black", margin: "10px" }}><img style={{ width: "90%", height: "83px", objectFit: "contain", verticalAlign: "middle" }} src={url + data?.CarImages.SideImage}></img></div>
+                                        <div style={{ width: "83px", height: "83px", backgroundColor: "white", border: "1px solid black", margin: "10px" }}><img style={{ width: "90%", height: "83px", objectFit: "contain", verticalAlign: "middle" }} src={getCarImageUrl(data?.CarImages.FrontImage)} alt=""></img></div>
+                                        <div style={{ width: "83px", height: "83px", backgroundColor: "white", border: "1px solid black", margin: "10px" }}><img style={{ width: "90%", height: "83px", objectFit: "contain", verticalAlign: "middle" }} src={getCarImageUrl(data?.CarImages.FrontRightImage)} alt=""></img></div>
+                                        <div style={{ width: "83px", height: "83px", backgroundColor: "white", border: "1px solid black", margin: "10px" }}><img style={{ width: "90%", height: "83px", objectFit: "contain", verticalAlign: "middle" }} src={getCarImageUrl(data?.CarImages.InsideImage)} alt=""></img></div>
+                                        <div style={{ width: "83px", height: "83px", backgroundColor: "white", border: "1px solid black", margin: "10px" }}><img style={{ width: "90%", height: "83px", objectFit: "contain", verticalAlign: "middle" }} src={getCarImageUrl(data?.CarImages.RearImage)} alt=""></img></div>
+                                        <div style={{ width: "83px", height: "83px", backgroundColor: "white", border: "1px solid black", margin: "10px" }}><img style={{ width: "90%", height: "83px", objectFit: "contain", verticalAlign: "middle" }} src={getCarImageUrl(data?.CarImages.SideImage)} alt=""></img></div>
 
 
                                     </div>

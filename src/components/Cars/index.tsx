@@ -10,13 +10,13 @@ import { Car } from './car'
 
 import { getCarss } from '../../redux/cars'
 import { useTranslation } from 'react-i18next'
+import { getCarImageUrl } from '../../helpers/carImage'
 
 function Cars() {
     const {t,i18n} = useTranslation();
     const history = useHistory();
     const dispatch = useDispatch()
     const [carss, setCarss] = useState<Car[]>([])
-    const url = "";
     useEffect(() => {
         dispatch(getCarss({
             payload: {
@@ -42,7 +42,7 @@ function Cars() {
                 return <div style={{ width: "294px", height: "435px", overflow: "hidden", backgroundColor: "white", display: "inline-block", textAlign: "start", margin: "0", padding: "0" }} onClick={() => route(item.Id)} >
                     <div style={{ padding: "0 !important", margin: "0" }}>
                         <div style={{ display: "flex", flexDirection: "column", height: "425px", justifyContent: "space-between" }}>
-                            <div style={{display:"flex",width:"294px"}}><img src={url+item.MainImage} style={{width:"294px",  height: "180px"}}></img></div>
+                            <div style={{display:"flex",width:"294px"}}><img src={getCarImageUrl(item.MainImage)} alt={`${item.CarBrand} ${item.CarModel}`} style={{width:"294px",  height: "180px"}}></img></div>
                             <div style={{ display: "block" }}>
                                 <div style={{ display: "flex", flexDirection: "column", padding: "10px",margin:"13px auto", color: "#585858" }}>
                                     <div style={{ fontWeight: "700" }}>{item.CarBrand} {item.CarModel}</div>

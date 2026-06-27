@@ -7,10 +7,10 @@ import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import garageCart from '../../redux/garage';
+import { getCarImageUrl } from '../../helpers/carImage';
 function HeaderGarage({data} : {data : GarageCartItem[]}) {
     const {t,i18n} = useTranslation();
     const dispatch = useDispatch();
-    const url = "";
     const history = useHistory()
 
     const remove = (item:any) => {
@@ -33,7 +33,7 @@ function HeaderGarage({data} : {data : GarageCartItem[]}) {
                             </div>
                         </div>
                         <div className='header-garage-left'>
-                            <img src={url + item.Car?.CarImages.FrontImage} style={{width:"127px",height:"100px"}}></img>
+                            <img src={getCarImageUrl(item.Car?.CarImages.FrontImage)} alt={`${item.Car?.CarBrand} ${item.Car?.CarModel}`} style={{width:"127px",height:"100px"}}></img>
                         </div>
                         <div className='header-garage-modal'><FaTrash color='#7a7a7a' onClick={()=>{
                             remove(item)

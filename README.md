@@ -1,58 +1,128 @@
-# Oto Plan
+# Oto Plan Clone
 
-#
+Oto Plan araç kiralama platformunun frontend klonu. Uygulama tamamen **mock veriler** ile çalışır; harici API veya backend bağlantısı gerektirmez.
 
-![](./src/images/img1.png)
+## Özellikler
 
-#
+- Ana sayfa ve kampanya alanı
+- Araç listeleme ve filtreleme (marka, model, gövde tipi, yakıt, vites)
+- Araç detay sayfası ve galeri
+- Teklif oluşturma modalı (dönem, km limiti, renk, ek hizmetler)
+- Garaj (sepet) — araçları ekleme, düzenleme ve kaldırma
+- Türkçe / İngilizce dil desteği (i18next)
 
-![](./src/images/img2.png)
+## Teknolojiler
 
-#
+| Alan | Kütüphane |
+|------|-----------|
+| Framework | React 17 + TypeScript |
+| Build | Create React App |
+| State | Redux, redux-saga, redux-persist |
+| Routing | react-router-dom v5 |
+| UI | Ant Design, RSuite |
+| Stil | SCSS / SASS |
+| Form | Formik + Yup |
 
-![](./src/images/img3.png)
+## Başlangıç
 
-#
+### Gereksinimler
 
-![](./src/images/img4.png)
+- Node.js 16+
+- npm
 
-#
+### Kurulum
 
-![](./src/images/img4.png)
+```bash
+npm install
+```
 
-#
+### Geliştirme sunucusu
 
-![](./src/images/img5.png)
+```bash
+npm start
+```
 
-#
+Uygulama [http://localhost:3000](http://localhost:3000) adresinde açılır.
 
-![](./src/images/img6.png)
+### Production build
 
-#
+```bash
+npm run build
+```
 
-![](./src/images/img7.png)
+### Testler
 
-#
+```bash
+npm test
+```
 
-![](./src/images/img8.png)
+## Sayfalar
 
-#
+| Rota | Açıklama |
+|------|----------|
+| `/` | Ana sayfa |
+| `/cars` | Araç listesi ve filtreleme |
+| `/car-details/:id` | Araç detayı ve teklif alma |
+| `/garage` | Garaj (sepet) |
 
-![](./src/images/img9.png)
+## Mock Veri Mimarisi
 
-#
+Tüm veri istekleri `src/redux/api/index.tsx` üzerinden `src/mocks/mockApi.ts` dosyasına yönlendirilir. Axios veya harici HTTP isteği kullanılmaz.
 
-![](./src/images/img10.png)
+```
+src/mocks/
+├── mockApi.ts              # Action tipine göre mock yanıt döndürür
+└── data/
+    ├── cars.ts             # Araç listesi (5 araç)
+    ├── carDetails.ts       # Araç detayları ve galeri
+    ├── lookups.ts          # Filtre seçenekleri (marka, model, vb.)
+    ├── colors.ts           # Renk seçenekleri
+    ├── extraServices.ts    # Ek hizmetler (kasko, lastik, vb.)
+    └── prices.ts           # Dönem ve km bazlı fiyat tabloları
+```
 
-#
+### Desteklenen action'lar
 
-![](./src/images/img11.png)
+| Action | Açıklama |
+|--------|----------|
+| `GET_CARS` | Tüm araç listesi |
+| `GET_CAR_LOOKUPS` | Filtre dropdown verileri |
+| `DETAIL_CAR` | Tek araç detayı (ID ile) |
+| `GET_FILTER_CARS` | Query string ile filtrelenmiş araçlar |
+| `GET_BRAND_DETAIL` | Marka ve modelleri |
+| `GET_EXTRASERVICES` | Ek hizmet listesi |
+| `GET_COLORS` | Renk listesi |
+| `GET_CAR_PRICE_LIST` | Araç fiyat tablosu |
 
-#
+Mock veriyi değiştirmek için `src/mocks/data/` altındaki dosyaları düzenlemeniz yeterlidir.
 
-![](./src/images/img12.png)
+## Görseller
 
-#
+Araç görselleri `public/images/cars/` klasöründe tutulur:
 
-![](./src/images/img13.png)
+- `car-1.jpg` — Ford Focus
+- `car-2.jpg` — Fiat Doblo
+- `car-3.jpg` — Volvo V60
+- `car-4.jpg` — VW Passat / BMW
 
+Bileşenler `src/helpers/carImage.ts` içindeki `getCarImageUrl()` fonksiyonu ile görsel yollarını çözümler.
+
+## Proje Yapısı
+
+```
+src/
+├── Pages/           # Sayfa bileşenleri (Home, Car, CarDetail, Garage)
+├── components/      # UI bileşenleri
+├── redux/           # Store, saga, action'lar
+│   ├── api/         # Mock API katmanı
+│   ├── cars/        # Araç saga'ları
+│   └── garage/      # Garaj (sepet) state
+├── mocks/           # Mock veri ve API resolver
+├── helpers/         # Yardımcı fonksiyonlar
+├── language/        # i18n çeviri dosyaları (tr, en)
+└── route.tsx        # React Router tanımları
+```
+
+## Lisans
+
+Bu proje eğitim ve demo amaçlıdır.

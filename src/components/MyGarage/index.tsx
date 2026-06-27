@@ -10,6 +10,7 @@ import { GarageCartItem } from './type';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { generateUUID } from '../../helpers/guid';
+import { getCarImageUrl } from '../../helpers/carImage';
 
 
 function MyGarage({
@@ -24,7 +25,6 @@ function MyGarage({
     const handleClose = () => setOpen(false);
     //const garageCarts = useSelector(garageCartSelector);
 
-    const url = "";
     const { t, i18n } = useTranslation();
     const dataRef = useRef<GarageCartItem>({
         ExtraServices: data?.ExtraServices ? data.ExtraServices : [],
@@ -47,7 +47,7 @@ function MyGarage({
             <div className='garage-left-car' id="garage-left">
                 <div className='garage-left-car-items'>
                     <div className='garage-car-image'>
-                        <img src={url + data?.Car?.CarImages.FrontImage}></img>
+                        <img src={getCarImageUrl(data?.Car?.CarImages.FrontImage)} alt={`${data?.Car?.CarBrand} ${data?.Car?.CarModel}`}></img>
                     </div>
                     <div className='garage-car-info'>
                         <div className='garage-car-header'>

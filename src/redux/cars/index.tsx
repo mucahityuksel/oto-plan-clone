@@ -72,15 +72,15 @@ const getCarSaga = [
         (payload: SagaGenericParams<Car[]>) => getFromApi<Car[]>(payload)),
     takeLatest(
         getCarDetail.toString(),
-        (payload: SagaGenericParams<CarDetail[]>) => getFromApi<CarDetail[]>(payload)),
+        (payload: SagaGenericParams<CarDetail>) => getFromApi<CarDetail>(payload)),
     takeLatest(
         getExtraService.toString(),
         (payload: SagaGenericParams<ExtraService[]>) =>
             getFromApi<ExtraService[]>(payload)
     ),
     takeLatest(
-        getCarPriceList.toString(),
-        (payload: SagaGenericParams<Price[]>) => getFromApi<Price[]>(payload)
+        getColorList.toString(),
+        (payload: SagaGenericParams<Color[]>) => getFromApi<Color[]>(payload)
     ),
     takeLatest(
         getCarPriceList.toString(),

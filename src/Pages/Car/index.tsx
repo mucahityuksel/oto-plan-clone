@@ -19,7 +19,7 @@ function Car() {
     const dispatch = useDispatch();
     const [selectedCar, setSelectedCar] = useState<CarDetail>();
 
-    useEffect(()=> {
+    useEffect(() => {
         dispatch(getCarDetail({
             payload: {
                 onSuccess: (message, payload) => {
@@ -27,10 +27,9 @@ function Car() {
                 },
                 onError: () => { }
             },
-            url: ``
+            url: params.id
         }))
-        console.log(selectedCar)
-    },[])
+    }, [dispatch, params.id])
     return (
         <div style={{ width:"100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", backgroundColor: "#F8F7F6" }}>
          
